@@ -153,7 +153,7 @@ csptest -keyset -newkeyset -container '\\.\HDIMAGE\<имя_контейнера>
 
 **Команда создания заявки:**
 ```bash
-cryptcp -creatrqst -dn 'CN=test_user,E=test_user@altlinux.org' -nokeygen -cont '\\.\HDIMAGE\<имя_контейнера>' <имя_файла_заявки>.csr -base64 -certusage "1.3.6.1.5.5.7.3.3" "1.3.6.1.4.1.311.10.3.12" "1.3.6.1.5.5.7.3.4" "1.3.6.1.4.1.311.10.5.1"
+cryptcp -creatrqst -dn 'CN=test_user,E=test_user@altlinux.org' -nokeygen -cont '\\.\HDIMAGE\<имя_контейнера>' <имя_файла_заявки>.csr -base64 -certusage "1.3.6.1.5.5.7.3.3,1.3.6.1.4.1.311.10.3.12,1.3.6.1.5.5.7.3.4,1.3.6.1.4.1.311.10.5.1"
 ```
 
 > **Примечание 1.** Параметр `-base64` обязателен, чтобы не пришлось вручную переводить файл `.csr` в читаемый формат. Строка -dn является примером.
